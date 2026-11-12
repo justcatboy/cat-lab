@@ -4,6 +4,8 @@ interface Props {
 }
 
 const { title } = Astro.props;
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
 
 <!doctype html>
@@ -11,23 +13,20 @@ const { title } = Astro.props;
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href={`${base}/favicon.svg`} type="image/svg+xml" />
     <title>{title}</title>
   </head>
   <body>
     <header>
       <nav>
-        <a href="/">🐱 Cat Lab</a>
-        <a href="/breeds">Породы</a>
-        <a href="/about">О сайте</a>
+        <a href={`${base}/`}>🐱 Cat Lab</a>
+        <a href={`${base}/breeds`}>Породы</a>
+        <a href={`${base}/about`}>О сайте</a>
       </nav>
     </header>
     <main>
       <slot />
     </main>
-    <footer>
-      <p>© {new Date().getFullYear()} Cat Lab</p>
-    </footer>
   </body>
 </html>
 
@@ -39,8 +38,7 @@ const { title } = Astro.props;
     color: #222;
     background: #fdfaf6;
   }
-  header,
-  footer {
+  header {
     background: #f3e9dc;
     padding: 1rem;
   }
@@ -59,10 +57,5 @@ const { title } = Astro.props;
     max-width: 800px;
     margin: 0 auto;
     padding: 2rem 1rem;
-  }
-  footer p {
-    text-align: center;
-    margin: 0;
-    color: #6b4f3a;
   }
 </style>
