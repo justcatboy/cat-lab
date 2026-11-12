@@ -1,0 +1,68 @@
+---
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <title>{title}</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="/">🐱 Cat Lab</a>
+        <a href="/breeds">Породы</a>
+        <a href="/about">О сайте</a>
+      </nav>
+    </header>
+    <main>
+      <slot />
+    </main>
+    <footer>
+      <p>© {new Date().getFullYear()} Cat Lab</p>
+    </footer>
+  </body>
+</html>
+
+<style is:global>
+  body {
+    margin: 0;
+    font-family: system-ui, sans-serif;
+    line-height: 1.6;
+    color: #222;
+    background: #fdfaf6;
+  }
+  header,
+  footer {
+    background: #f3e9dc;
+    padding: 1rem;
+  }
+  nav {
+    display: flex;
+    gap: 1.5rem;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  nav a {
+    color: #6b4f3a;
+    text-decoration: none;
+    font-weight: 600;
+  }
+  main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+  }
+  footer p {
+    text-align: center;
+    margin: 0;
+    color: #6b4f3a;
+  }
+</style>

@@ -1,0 +1,32 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const breeds = [
+  { name: 'Мейн-кун', description: 'Одна из самых крупных пород, дружелюбная и спокойная.' },
+  { name: 'Британская короткошёрстная', description: 'Плюшевая шерсть и независимый характер.' },
+  { name: 'Сиамская', description: 'Разговорчивая, активная и очень привязчивая.' },
+  { name: 'Сфинкс', description: 'Бесшёрстная, тёплая на ощупь и любит внимание.' },
+];
+---
+
+<Layout title="Породы — Cat Lab">
+  <h1>Популярные породы</h1>
+  {
+    breeds.map((breed) => (
+      <article>
+        <h2>{breed.name}</h2>
+        <p>{breed.description}</p>
+      </article>
+    ))
+  }
+</Layout>
+
+<style>
+  article {
+    background: #fff;
+    border: 1px solid #eadfd2;
+    border-radius: 8px;
+    padding: 0.5rem 1rem;
+    margin-bottom: 1rem;
+  }
+</style>
