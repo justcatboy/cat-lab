@@ -1,4 +1,4 @@
-name: Deploy Astro site to Pages
+name: CD
 
 on:
   push:
@@ -15,9 +15,8 @@ permissions:
   id-token: write
 
 jobs:
-
   build:
-    name: Build
+    name: Build (CD)
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -45,7 +44,7 @@ jobs:
     needs: build
 
     runs-on: ubuntu-latest
-    name: Deploy
+    name: Deploy (CD)
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
