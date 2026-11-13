@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="Мейн-кун">
+  <rect width="200" height="200" fill="#f3e9dc"/>
+  <!-- уши с кисточками -->
+  <polygon points="38,92 52,22 92,66" fill="#8a5a33"/>
+  <polygon points="162,92 148,22 108,66" fill="#8a5a33"/>
+  <line x1="52" y1="22" x2="48" y2="6" stroke="#5c3a1e" stroke-width="4" stroke-linecap="round"/>
+  <line x1="148" y1="22" x2="152" y2="6" stroke="#5c3a1e" stroke-width="4" stroke-linecap="round"/>
+  <polygon points="52,78 58,38 82,66" fill="#e8c4a0"/>
+  <polygon points="148,78 142,38 118,66" fill="#e8c4a0"/>
+  <!-- голова и грива -->
+  <ellipse cx="100" cy="118" rx="76" ry="66" fill="#a36d3f"/>
+  <path d="M40 150 Q100 200 160 150 Q100 175 40 150Z" fill="#f1e2cf"/>
+  <!-- полоски -->
+  <path d="M100 58 v24 M84 62 l4 18 M116 62 l-4 18" stroke="#5c3a1e" stroke-width="5" stroke-linecap="round"/>
+  <!-- глаза -->
+  <ellipse cx="72" cy="114" rx="13" ry="11" fill="#c9b034"/>
+  <ellipse cx="128" cy="114" rx="13" ry="11" fill="#c9b034"/>
+  <ellipse cx="72" cy="114" rx="4" ry="10" fill="#1d1d1d"/>
+  <ellipse cx="128" cy="114" rx="4" ry="10" fill="#1d1d1d"/>
+  <!-- нос и рот -->
+  <polygon points="92,136 108,136 100,146" fill="#c47a6a"/>
+  <path d="M100 146 q-8 10 -16 4 M100 146 q8 10 16 4" stroke="#3b2414" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <!-- усы -->
+  <path d="M60 140 h-40 M60 148 l-38 8 M140 140 h40 M140 148 l38 8" stroke="#f8f1e7" stroke-width="2" stroke-linecap="round"/>
+</svg>

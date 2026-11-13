@@ -24,8 +24,9 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
         <a href={`${base}/`}>🐱 Cat Lab</a>
         <a href={`${base}/breeds`}>Породы</a>
         <a href={`${base}/about`}>О сайте</a>
-        <a class="version" href={`${base}/version.json`} title={buildInfo.commit ?? undefined}>
-          v{buildInfo.version}{buildInfo.commitShort && ` · ${buildInfo.commitShort}`}
+        <a class="version" href={`${base}/status`} title={buildInfo.commit ?? undefined}>
+          v{buildInfo.version}
+          {buildInfo.commitShort && ` · ${buildInfo.commitShort}`}
         </a>
       </nav>
     </header>

@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="Британская короткошёрстная">
+  <rect width="200" height="200" fill="#f3e9dc"/>
+  <!-- маленькие округлые уши -->
+  <polygon points="40,90 56,40 90,66" fill="#7d8a99" stroke="#7d8a99" stroke-width="8" stroke-linejoin="round"/>
+  <polygon points="160,90 144,40 110,66" fill="#7d8a99" stroke="#7d8a99" stroke-width="8" stroke-linejoin="round"/>
+  <polygon points="54,78 60,54 80,68" fill="#c9a3a8"/>
+  <polygon points="146,78 140,54 120,68" fill="#c9a3a8"/>
+  <!-- круглая голова и щёки -->
+  <circle cx="100" cy="120" r="72" fill="#8b98a8"/>
+  <ellipse cx="78" cy="150" rx="26" ry="20" fill="#9aa6b5"/>
+  <ellipse cx="122" cy="150" rx="26" ry="20" fill="#9aa6b5"/>
+  <!-- большие медные глаза -->
+  <circle cx="70" cy="112" r="15" fill="#d98a2b"/>
+  <circle cx="130" cy="112" r="15" fill="#d98a2b"/>
+  <ellipse cx="70" cy="112" rx="6" ry="12" fill="#1d1d1d"/>
+  <ellipse cx="130" cy="112" rx="6" ry="12" fill="#1d1d1d"/>
+  <circle cx="74" cy="106" r="3" fill="#fff"/>
+  <circle cx="134" cy="106" r="3" fill="#fff"/>
+  <!-- нос и рот -->
+  <polygon points="93,136 107,136 100,145" fill="#6b7480"/>
+  <path d="M100 145 q-8 9 -15 3 M100 145 q8 9 15 3" stroke="#3d434b" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <!-- усы -->
+  <path d="M58 146 h-38 M58 154 l-36 8 M142 146 h38 M142 154 l36 8" stroke="#e6e9ee" stroke-width="2" stroke-linecap="round"/>
+</svg>

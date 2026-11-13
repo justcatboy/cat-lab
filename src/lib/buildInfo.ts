@@ -14,6 +14,10 @@ function git(cmd: string): string | null {
 // В GitHub Actions берём данные из переменных окружения, локально — из git.
 const commit = process.env.GITHUB_SHA ?? git('rev-parse HEAD');
 
+const { GITHUB_SERVER_URL, GITHUB_REPOSITORY, GITHUB_RUN_ID } = process.env;
+const repoUrl =
+  GITHUB_SERVER_URL && GITHUB_REPOSITORY ? `${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}` : null;
+
 export const buildInfo = {
   name: pkg.name,
   version: pkg.version,
@@ -22,4 +26,7 @@ export const buildInfo = {
   branch: process.env.GITHUB_REF_NAME ?? git('rev-parse --abbrev-ref HEAD'),
   runNumber: process.env.GITHUB_RUN_NUMBER ?? null,
   builtAt: new Date().toISOString(),
+  // Ссылки есть только при сборке в GitHub Actions.
+  commitUrl: repoUrl && commit ? `${repoUrl}/commit/${commit}` : null,
+  runUrl: repoUrl && GITHUB_RUN_ID ? `${repoUrl}/actions/runs/${GITHUB_RUN_ID}` : null,
 };

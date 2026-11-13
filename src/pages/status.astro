@@ -1,0 +1,75 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { buildInfo } from '../lib/buildInfo';
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+
+const builtAt = new Date(buildInfo.builtAt).toLocaleString('ru-RU', {
+  timeZone: 'UTC',
+  dateStyle: 'long',
+  timeStyle: 'medium',
+});
+---
+
+<Layout title="Статус — Cat Lab">
+  <h1>Статус сборки</h1>
+
+  <dl>
+    <dt>Версия</dt>
+    <dd>v{buildInfo.version}</dd>
+
+    <dt>Коммит</dt>
+    <dd>
+      {buildInfo.commitUrl ? (
+        <a href={buildInfo.commitUrl}>
+          <code>{buildInfo.commitShort}</code>
+        </a>
+      ) : (
+        <code>{buildInfo.commitShort ?? '—'}</code>
+      )}
+    </dd>
+
+    <dt>Ветка</dt>
+    <dd>
+      <code>{buildInfo.branch ?? '—'}</code>
+    </dd>
+
+    <dt>Запуск workflow</dt>
+    <dd>
+      {buildInfo.runUrl ? (
+        <a href={buildInfo.runUrl}>#{buildInfo.runNumber}</a>
+      ) : (
+        'локальная сборка'
+      )}
+    </dd>
+
+    <dt>Собрано</dt>
+    <dd>{builtAt} (UTC)</dd>
+  </dl>
+
+  <p>
+    <a href={`${base}/version.json`}>Те же данные в JSON</a>
+  </p>
+</Layout>
+
+<style>
+  dl {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    gap: 0.5rem 1.5rem;
+    background: #fff;
+    border: 1px solid #eadfd2;
+    border-radius: 8px;
+    padding: 1rem 1.25rem;
+  }
+  dt {
+    font-weight: 600;
+    color: #6b4f3a;
+  }
+  dd {
+    margin: 0;
+  }
+  a {
+    color: #6b4f3a;
+  }
+</style>
