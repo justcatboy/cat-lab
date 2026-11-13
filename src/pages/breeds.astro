@@ -1,32 +1,70 @@
 ---
 import Layout from '../layouts/Layout.astro';
 
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+
 const breeds = [
-  { name: 'Мейн-кун', description: 'Одна из самых крупных пород, дружелюбная и спокойная.' },
-  { name: 'Британская короткошёрстная', description: 'Плюшевая шерсть и независимый характер.' },
-  { name: 'Сиамская', description: 'Разговорчивая, активная и очень привязчивая.' },
-  { name: 'Сфинкс', description: 'Бесшёрстная, тёплая на ощупь и любит внимание.' },
+  {
+    name: 'Мейн-кун',
+    image: 'maine-coon.svg',
+    description: 'Одна из самых крупных пород, дружелюбная и спокойная.',
+  },
+  {
+    name: 'Британская короткошёрстная',
+    image: 'british-shorthair.svg',
+    description: 'Плюшевая шерсть и независимый характер.',
+  },
+  {
+    name: 'Сиамская',
+    image: 'siamese.svg',
+    description: 'Разговорчивая, активная и очень привязчивая.',
+  },
+  {
+    name: 'Сфинкс',
+    image: 'sphynx.svg',
+    description: 'Бесшёрстная, тёплая на ощупь и любит внимание.',
+  },
 ];
 ---
 
 <Layout title="Породы — Cat Lab">
   <h1>Популярные породы</h1>
-  {
-    breeds.map((breed) => (
-      <article>
+  {breeds.map((breed) => (
+    <article>
+      <img src={`${base}/cats/${breed.image}`} alt={breed.name} width="120" height="120" />
+      <div>
         <h2>{breed.name}</h2>
         <p>{breed.description}</p>
-      </article>
-    ))
-  }
+      </div>
+    </article>
+  ))}
 </Layout>
 
 <style>
   article {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
     background: #fff;
     border: 1px solid #eadfd2;
     border-radius: 8px;
-    padding: 0.5rem 1rem;
+    padding: 1rem;
     margin-bottom: 1rem;
+  }
+  img {
+    flex-shrink: 0;
+    border-radius: 50%;
+  }
+  h2 {
+    margin: 0 0 0.25rem;
+  }
+  p {
+    margin: 0;
+  }
+  @media (max-width: 480px) {
+    article {
+      flex-direction: column;
+      text-align: center;
+    }
   }
 </style>

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="Сфинкс">
+  <rect width="200" height="200" fill="#f3e9dc"/>
+  <!-- огромные уши -->
+  <polygon points="30,104 26,8 96,64" fill="#e3a99a"/>
+  <polygon points="170,104 174,8 104,64" fill="#e3a99a"/>
+  <polygon points="42,92 40,30 84,66" fill="#d48a7c"/>
+  <polygon points="158,92 160,30 116,66" fill="#d48a7c"/>
+  <!-- голова -->
+  <path d="M34 108 Q100 34 166 108 Q158 178 100 186 Q42 178 34 108Z" fill="#eab5a6"/>
+  <!-- морщинки -->
+  <path d="M84 66 q16 -8 32 0 M80 76 q20 -9 40 0 M86 86 q14 -6 28 0" stroke="#cf8f80" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <!-- зелёные глаза -->
+  <path d="M50 118 Q68 98 88 118 Q68 132 50 118Z" fill="#7bbf5a"/>
+  <path d="M150 118 Q132 98 112 118 Q132 132 150 118Z" fill="#7bbf5a"/>
+  <ellipse cx="69" cy="117" rx="3.5" ry="9" fill="#1d1d1d"/>
+  <ellipse cx="131" cy="117" rx="3.5" ry="9" fill="#1d1d1d"/>
+  <!-- нос и рот -->
+  <polygon points="93,144 107,144 100,153" fill="#c46f62"/>
+  <path d="M100 153 q-7 9 -14 3 M100 153 q7 9 14 3" stroke="#8a4a40" stroke-width="3" fill="none" stroke-linecap="round"/>
+</svg>

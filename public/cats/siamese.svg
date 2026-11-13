@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="Сиамская кошка">
+  <rect width="200" height="200" fill="#f3e9dc"/>
+  <!-- тёмные уши -->
+  <polygon points="36,96 46,20 94,62" fill="#4a3426"/>
+  <polygon points="164,96 154,20 106,62" fill="#4a3426"/>
+  <polygon points="50,82 54,40 82,64" fill="#7a5a48"/>
+  <polygon points="150,82 146,40 118,64" fill="#7a5a48"/>
+  <!-- светлая клиновидная голова -->
+  <path d="M30 100 Q100 20 170 100 Q160 175 100 188 Q40 175 30 100Z" fill="#f2e3c9"/>
+  <!-- тёмная маска -->
+  <path d="M64 118 Q100 100 136 118 Q130 172 100 182 Q70 172 64 118Z" fill="#4a3426"/>
+  <!-- голубые миндалевидные глаза -->
+  <path d="M52 112 Q68 98 86 114 Q68 124 52 112Z" fill="#4f9fd8"/>
+  <path d="M148 112 Q132 98 114 114 Q132 124 148 112Z" fill="#4f9fd8"/>
+  <ellipse cx="70" cy="112" rx="3" ry="7" fill="#1d1d1d"/>
+  <ellipse cx="130" cy="112" rx="3" ry="7" fill="#1d1d1d"/>
+  <!-- нос и рот -->
+  <polygon points="93,140 107,140 100,149" fill="#1f1510"/>
+  <path d="M100 149 q-7 9 -14 3 M100 149 q7 9 14 3" stroke="#1f1510" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <!-- усы -->
+  <path d="M70 150 h-48 M70 158 l-44 10 M130 150 h48 M130 158 l44 10" stroke="#f8f1e7" stroke-width="2" stroke-linecap="round"/>
+</svg>
