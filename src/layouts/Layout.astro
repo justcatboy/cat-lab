@@ -1,4 +1,6 @@
 ---
+import { buildInfo } from '../lib/buildInfo';
+
 interface Props {
   title: string;
 }
@@ -22,6 +24,9 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
         <a href={`${base}/`}>🐱 Cat Lab</a>
         <a href={`${base}/breeds`}>Породы</a>
         <a href={`${base}/about`}>О сайте</a>
+        <a class="version" href={`${base}/version.json`} title={buildInfo.commit ?? undefined}>
+          v{buildInfo.version}{buildInfo.commitShort && ` · ${buildInfo.commitShort}`}
+        </a>
       </nav>
     </header>
     <main>
@@ -52,6 +57,13 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
     color: #6b4f3a;
     text-decoration: none;
     font-weight: 600;
+  }
+  nav a.version {
+    margin-left: auto;
+    font-weight: 400;
+    font-size: 0.85rem;
+    font-family: ui-monospace, monospace;
+    opacity: 0.75;
   }
   main {
     max-width: 800px;
